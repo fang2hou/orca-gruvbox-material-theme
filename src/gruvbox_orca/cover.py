@@ -144,15 +144,6 @@ TREE = [
 ]
 
 FEATURED = "medium-mix"
-CHIP_RULES = (
-    "Keywords",
-    "Storage modifiers",
-    "Types",
-    "Functions",
-    "Strings",
-    "Properties and keys",
-    "Numbers, booleans and built-in constants",
-)
 CSS_VARIABLES = {
     "--bg": "--background",
     "--fg": "--foreground",
@@ -168,7 +159,6 @@ CSS_VARIABLES = {
     "--tab-inactive": "--tab-inactive",
     "--tab-inactive-fg": "--tab-inactive-foreground",
 }
-TERMINAL_SWATCHES = ("background", "foreground", "red", "yellow", "green", "cyan", "blue", "magenta", "brightBlack")
 
 
 def load(slug: str) -> tuple[dict, dict, dict]:
@@ -217,12 +207,11 @@ def window(mode: str) -> str:
     tokens, syntax, term = load(f"{mode}-{FEATURED}")
     title = f"Gruvbox Material {mode.title()} (Medium, Mix)"
     tree = "".join(
-        f'<div class="row{" sel" if selected else ""}" style="padding-left:{12 + depth * 14}px">'
+        f'<div class="row{" sel" if selected else ""}" style="padding-left:{14 + depth * 16}px">'
         f'<span class="dot"></span>{html.escape(name)}</div>'
         for depth, name, selected in TREE
     )
     code = "".join(code_line(n, parts, syntax) for n, parts in enumerate(CODE, 1))
-    swatches = "".join(f'<span style="background:{term[key]}"></span>' for key in TERMINAL_SWATCHES)
     lights = "".join(f'<i style="background:{c}"></i>' for c in ("#ff5f57", "#febc2e", "#28c840"))
     tabs = '<span class="tab on">theme.ts</span><span class="tab">router.ts</span><span class="tab">README.md</span>'
     return f"""
@@ -236,27 +225,15 @@ def window(mode: str) -> str:
       <div class="term">
         <div class="thead">TERMINAL&nbsp;&nbsp;&nbsp;zsh — atlas</div>
         <div class="tbody" style="color:{term["foreground"]}">{terminal_lines(term)}</div>
-        <div class="swatches">{swatches}</div>
       </div>
     </div>
   </div>
 </div>"""
 
 
-def variant_chips() -> str:
-    manifest = json.loads((ROOT / "orca-plugin.json").read_text())
-    chips = []
-    for entry in manifest["contributes"]["themes"]:
-        tokens, syntax, _ = load(entry["id"].removeprefix("gruvbox-material-"))
-        dots = "".join(f'<i style="background:{syntax[name]["foreground"]}"></i>' for name in CHIP_RULES)
-        label = html.escape(entry["title"].removeprefix("Gruvbox Material "))
-        chips.append(f'<div class="chip" style="{theme_variables(tokens)}"><span>{label}</span><b>{dots}</b></div>')
-    return f'<div class="variants">{"".join(chips)}</div>'
-
-
 def page() -> str:
     css = (Path(__file__).parent / "cover.css").read_text()
-    body = window("dark") + window("light") + variant_chips()
+    body = window("dark") + window("light")
     return f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}</body></html>'
 
 
