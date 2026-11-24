@@ -200,6 +200,6 @@
   "capabilities": [],
   "cover": {
     "path": "images/cover.png",
-    "alt": "Gruvbox Material Mix Medium Dark and Light previews with swatches of all 18 variants, rendered from the theme colors"
+    "alt": "Gruvbox Material Dark and Light (Medium, Mix) previews of the explorer, editor and terminal, rendered from the theme colors"
   }
 }
