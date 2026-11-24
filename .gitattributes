@@ -1,0 +1,7 @@
+* -linguist-detectable
+src/** linguist-detectable
+tests/** linguist-detectable
+*.json -linguist-detectable
+themes/*.json linguist-generated
+terminal/*.json linguist-generated
+uv.lock linguist-generated

@@ -1,0 +1,205 @@
+{
+  "manifestVersion": 2,
+  "id": "gruvbox-material-theme",
+  "publisher": "fang2hou",
+  "name": "Gruvbox Material",
+  "version": "1.0.0",
+  "execution": "data",
+  "description": "All nine Gruvbox Material variants (hard, medium and soft backgrounds with the Material, Mix and Original foreground palettes) in dark and light, with contrast-checked UI, syntax and terminal colors.",
+  "license": "MIT",
+  "repository": "https://github.com/fang2hou/orca-gruvbox-material-theme",
+  "engines": {
+    "orca": ">=1.4.245"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "gruvbox-material-dark-hard-material",
+        "title": "Gruvbox Material Dark (Hard, Material)",
+        "path": "themes/gruvbox-material-dark-hard-material.json"
+      },
+      {
+        "id": "gruvbox-material-dark-hard-mix",
+        "title": "Gruvbox Material Dark (Hard, Mix)",
+        "path": "themes/gruvbox-material-dark-hard-mix.json"
+      },
+      {
+        "id": "gruvbox-material-dark-hard-original",
+        "title": "Gruvbox Material Dark (Hard, Original)",
+        "path": "themes/gruvbox-material-dark-hard-original.json"
+      },
+      {
+        "id": "gruvbox-material-dark-medium-material",
+        "title": "Gruvbox Material Dark (Medium, Material)",
+        "path": "themes/gruvbox-material-dark-medium-material.json"
+      },
+      {
+        "id": "gruvbox-material-dark-medium-mix",
+        "title": "Gruvbox Material Dark (Medium, Mix)",
+        "path": "themes/gruvbox-material-dark-medium-mix.json"
+      },
+      {
+        "id": "gruvbox-material-dark-medium-original",
+        "title": "Gruvbox Material Dark (Medium, Original)",
+        "path": "themes/gruvbox-material-dark-medium-original.json"
+      },
+      {
+        "id": "gruvbox-material-dark-soft-material",
+        "title": "Gruvbox Material Dark (Soft, Material)",
+        "path": "themes/gruvbox-material-dark-soft-material.json"
+      },
+      {
+        "id": "gruvbox-material-dark-soft-mix",
+        "title": "Gruvbox Material Dark (Soft, Mix)",
+        "path": "themes/gruvbox-material-dark-soft-mix.json"
+      },
+      {
+        "id": "gruvbox-material-dark-soft-original",
+        "title": "Gruvbox Material Dark (Soft, Original)",
+        "path": "themes/gruvbox-material-dark-soft-original.json"
+      },
+      {
+        "id": "gruvbox-material-light-hard-material",
+        "title": "Gruvbox Material Light (Hard, Material)",
+        "path": "themes/gruvbox-material-light-hard-material.json"
+      },
+      {
+        "id": "gruvbox-material-light-hard-mix",
+        "title": "Gruvbox Material Light (Hard, Mix)",
+        "path": "themes/gruvbox-material-light-hard-mix.json"
+      },
+      {
+        "id": "gruvbox-material-light-hard-original",
+        "title": "Gruvbox Material Light (Hard, Original)",
+        "path": "themes/gruvbox-material-light-hard-original.json"
+      },
+      {
+        "id": "gruvbox-material-light-medium-material",
+        "title": "Gruvbox Material Light (Medium, Material)",
+        "path": "themes/gruvbox-material-light-medium-material.json"
+      },
+      {
+        "id": "gruvbox-material-light-medium-mix",
+        "title": "Gruvbox Material Light (Medium, Mix)",
+        "path": "themes/gruvbox-material-light-medium-mix.json"
+      },
+      {
+        "id": "gruvbox-material-light-medium-original",
+        "title": "Gruvbox Material Light (Medium, Original)",
+        "path": "themes/gruvbox-material-light-medium-original.json"
+      },
+      {
+        "id": "gruvbox-material-light-soft-material",
+        "title": "Gruvbox Material Light (Soft, Material)",
+        "path": "themes/gruvbox-material-light-soft-material.json"
+      },
+      {
+        "id": "gruvbox-material-light-soft-mix",
+        "title": "Gruvbox Material Light (Soft, Mix)",
+        "path": "themes/gruvbox-material-light-soft-mix.json"
+      },
+      {
+        "id": "gruvbox-material-light-soft-original",
+        "title": "Gruvbox Material Light (Soft, Original)",
+        "path": "themes/gruvbox-material-light-soft-original.json"
+      }
+    ],
+    "terminalThemes": [
+      {
+        "id": "gruvbox-material-dark-hard-material",
+        "title": "Gruvbox Material Dark (Hard, Material)",
+        "path": "terminal/gruvbox-material-dark-hard-material.json"
+      },
+      {
+        "id": "gruvbox-material-dark-hard-mix",
+        "title": "Gruvbox Material Dark (Hard, Mix)",
+        "path": "terminal/gruvbox-material-dark-hard-mix.json"
+      },
+      {
+        "id": "gruvbox-material-dark-hard-original",
+        "title": "Gruvbox Material Dark (Hard, Original)",
+        "path": "terminal/gruvbox-material-dark-hard-original.json"
+      },
+      {
+        "id": "gruvbox-material-dark-medium-material",
+        "title": "Gruvbox Material Dark (Medium, Material)",
+        "path": "terminal/gruvbox-material-dark-medium-material.json"
+      },
+      {
+        "id": "gruvbox-material-dark-medium-mix",
+        "title": "Gruvbox Material Dark (Medium, Mix)",
+        "path": "terminal/gruvbox-material-dark-medium-mix.json"
+      },
+      {
+        "id": "gruvbox-material-dark-medium-original",
+        "title": "Gruvbox Material Dark (Medium, Original)",
+        "path": "terminal/gruvbox-material-dark-medium-original.json"
+      },
+      {
+        "id": "gruvbox-material-dark-soft-material",
+        "title": "Gruvbox Material Dark (Soft, Material)",
+        "path": "terminal/gruvbox-material-dark-soft-material.json"
+      },
+      {
+        "id": "gruvbox-material-dark-soft-mix",
+        "title": "Gruvbox Material Dark (Soft, Mix)",
+        "path": "terminal/gruvbox-material-dark-soft-mix.json"
+      },
+      {
+        "id": "gruvbox-material-dark-soft-original",
+        "title": "Gruvbox Material Dark (Soft, Original)",
+        "path": "terminal/gruvbox-material-dark-soft-original.json"
+      },
+      {
+        "id": "gruvbox-material-light-hard-material",
+        "title": "Gruvbox Material Light (Hard, Material)",
+        "path": "terminal/gruvbox-material-light-hard-material.json"
+      },
+      {
+        "id": "gruvbox-material-light-hard-mix",
+        "title": "Gruvbox Material Light (Hard, Mix)",
+        "path": "terminal/gruvbox-material-light-hard-mix.json"
+      },
+      {
+        "id": "gruvbox-material-light-hard-original",
+        "title": "Gruvbox Material Light (Hard, Original)",
+        "path": "terminal/gruvbox-material-light-hard-original.json"
+      },
+      {
+        "id": "gruvbox-material-light-medium-material",
+        "title": "Gruvbox Material Light (Medium, Material)",
+        "path": "terminal/gruvbox-material-light-medium-material.json"
+      },
+      {
+        "id": "gruvbox-material-light-medium-mix",
+        "title": "Gruvbox Material Light (Medium, Mix)",
+        "path": "terminal/gruvbox-material-light-medium-mix.json"
+      },
+      {
+        "id": "gruvbox-material-light-medium-original",
+        "title": "Gruvbox Material Light (Medium, Original)",
+        "path": "terminal/gruvbox-material-light-medium-original.json"
+      },
+      {
+        "id": "gruvbox-material-light-soft-material",
+        "title": "Gruvbox Material Light (Soft, Material)",
+        "path": "terminal/gruvbox-material-light-soft-material.json"
+      },
+      {
+        "id": "gruvbox-material-light-soft-mix",
+        "title": "Gruvbox Material Light (Soft, Mix)",
+        "path": "terminal/gruvbox-material-light-soft-mix.json"
+      },
+      {
+        "id": "gruvbox-material-light-soft-original",
+        "title": "Gruvbox Material Light (Soft, Original)",
+        "path": "terminal/gruvbox-material-light-soft-original.json"
+      }
+    ]
+  },
+  "capabilities": [],
+  "cover": {
+    "path": "images/cover.png",
+    "alt": "Gruvbox Material Mix Medium Dark and Light previews with swatches of all 18 variants, rendered from the theme colors"
+  }
+}

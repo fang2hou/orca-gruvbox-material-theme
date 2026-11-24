@@ -1,0 +1,49 @@
+[tools]
+python = "3.12.16"
+uv = "0.13.9"
+ruff = "0.17.6"
+prek = "0.5.11"
+cocogitto = "7.0.0"
+gitleaks = "8.30.1"
+
+[env]
+UV_PYTHON_PREFERENCE = "only-system"
+UV_PROJECT_ENVIRONMENT = "{{env.HOME}}/.cache/uv-projects/orca-gruvbox-material-theme"
+
+[tasks.generate]
+description = "Regenerate themes/, terminal/ and the manifest's contributes section"
+run = "uv run gruvbox-orca"
+
+[tasks.report]
+description = "List each variant's contrast-driven color adjustments"
+run = "uv run gruvbox-orca --report"
+
+[tasks.cover]
+description = "Render images/cover.png from the generated themes"
+run = "uv run --group cover python -m gruvbox_orca.cover"
+
+[tasks.format]
+description = "Format and auto-fix Python sources"
+run = ["ruff format", "ruff check --fix"]
+
+[tasks.lint]
+description = "Lint Python sources"
+run = "ruff check"
+
+[tasks.check]
+description = "Lint, format check, secret scan, and verify generated files pass Orca's contrast check and are current"
+run = [
+  "ruff check",
+  "ruff format --check",
+  "gitleaks dir . --redact --no-banner",
+  "uv run --locked gruvbox-orca --check",
+]
+
+[tasks.test]
+description = "Run unit tests after the full check"
+depends = ["check"]
+run = "uv run --locked python -m unittest discover -s tests"
+
+[tasks.validate-plugin]
+description = "Validate the plugin with the local Orca CLI (needs Orca installed)"
+run = "orca plugin validate ."

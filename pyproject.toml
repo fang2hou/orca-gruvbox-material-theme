@@ -1,0 +1,29 @@
+[project]
+name = "gruvbox-orca"
+version = "0.0.0"
+description = "Generator for the Gruvbox Material Orca themes; the plugin version lives in orca-plugin.json."
+authors = [{ name = "Zhou Fang" }]
+license = "MIT"
+requires-python = "==3.12.*"
+classifiers = ["Private :: Do Not Upload"]
+dependencies = []
+
+[project.scripts]
+gruvbox-orca = "gruvbox_orca.build:main"
+
+[dependency-groups]
+cover = ["playwright>=1.65"]
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+default-groups = []
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

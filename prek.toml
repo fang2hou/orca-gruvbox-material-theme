@@ -1,0 +1,9 @@
+#:schema https://www.schemastore.org/prek.json
+default_install_hook_types = ["pre-commit", "commit-msg"]
+
+[[repos]]
+repo = "local"
+hooks = [
+  { id = "check", name = "project check", entry = "mise run check", language = "system", pass_filenames = false, always_run = true, stages = ["pre-commit"] },
+  { id = "commit-message", name = "conventional commit message", entry = "cog verify --file", language = "system", stages = ["commit-msg"] },
+]
